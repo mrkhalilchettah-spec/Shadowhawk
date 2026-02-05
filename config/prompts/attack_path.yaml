@@ -1,0 +1,67 @@
+name: attack_path
+version: 1.0.0
+description: Generate attack path analysis and kill chain mapping
+
+system_prompt: |
+  You are a threat modeling expert specializing in attack path analysis and 
+  kill chain modeling. Your role is to identify and document potential attack 
+  paths that adversaries could use to compromise systems, map them to established 
+  frameworks (MITRE ATT&CK, Cyber Kill Chain), and recommend defensive measures.
+  
+  Focus on:
+  - Realistic attack scenarios
+  - Step-by-step attack progression
+  - Required attacker capabilities
+  - Detection and prevention opportunities
+
+user_prompt: |
+  Analyze potential attack paths for the following scenario:
+  
+  Initial Access Point: ${entry_point}
+  Target Asset: ${target_asset}
+  Known Vulnerabilities: ${vulnerabilities}
+  Current Security Controls: ${security_controls}
+  Network Topology: ${network_topology}
+  
+  Provide comprehensive attack path analysis:
+  
+  1. ATTACK PATH SCENARIOS (Top 3 most likely)
+     For each path:
+     - Attack Path Name
+     - Attacker Profile (skill level, resources)
+     - Step-by-step progression
+     - MITRE ATT&CK techniques used
+     - Prerequisites and assumptions
+  
+  2. KILL CHAIN MAPPING
+     Map each path to Cyber Kill Chain stages:
+     - Reconnaissance
+     - Weaponization
+     - Delivery
+     - Exploitation
+     - Installation
+     - Command & Control
+     - Actions on Objectives
+  
+  3. DETECTION OPPORTUNITIES
+     - Log sources to monitor
+     - Indicators of Compromise (IoCs)
+     - Behavioral anomalies to detect
+  
+  4. DEFENSIVE RECOMMENDATIONS
+     - Preventive controls
+     - Detective controls
+     - Response procedures
+
+tags:
+  - attack-path
+  - threat-modeling
+  - mitre-attack
+
+examples:
+  - input:
+      entry_point: "Phishing email with malicious attachment"
+      target_asset: "Financial Database"
+      vulnerabilities: "Unpatched Windows servers, weak passwords"
+      security_controls: "Antivirus, firewall"
+      network_topology: "Flat network, limited segmentation"

@@ -1,3 +1,18 @@
+ cto-task-goaldesign-and-implement-the-initial-architecture-and-core-m
+
+ cto-task-goalreplace-placeholder-ai-functionality-with-real-llm-integ
+
+ cto-task-goalbuild-a-professional-enterprise-grade-frontend-dashboard
+# ShadowHawk Platform Frontend
+node_modules/
+.next/
+dist/
+coverage/
+.env*
+.DS_Store
+
+ main
+ main
 # Python
 __pycache__/
 *.py[cod]
@@ -16,11 +31,24 @@ parts/
 sdist/
 var/
 wheels/
+ cto-task-goaldesign-and-implement-the-initial-architecture-and-core-m
+
+ cto-task-goalreplace-placeholder-ai-functionality-with-real-llm-integ
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+
+pip-wheel-metadata/
+share/python-wheels/
+ main
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
 
+ cto-task-goaldesign-and-implement-the-initial-architecture-and-core-m
 # Virtual Environment
 venv/
 env/
@@ -28,6 +56,38 @@ ENV/
 .venv
 
 # IDE
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Environments
+ main
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+ cto-task-goalreplace-placeholder-ai-functionality-with-real-llm-integ
+ main
 .vscode/
 .idea/
 *.swp
@@ -42,6 +102,7 @@ htmlcov/
 .tox/
 .hypothesis/
 
+ cto-task-goaldesign-and-implement-the-initial-architecture-and-core-m
 # Environment variables
 .env
 .env.local
@@ -75,3 +136,46 @@ secrets/
 # API Keys
 api_keys.txt
 config/local.yaml
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Ruff
+.ruff_cache/
+
+# Project specific
+*.log
+.cache/
+data/
+temp/
+
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+models/
+*.pkl
+*.joblib
+checkpoints/
+*.log
+shadowhawk.db
+*.sqlite
+
+# Sensitive
+*.key
+*.pem
+secrets.yaml
+secrets.yml
+secrets.json
+ main
+ main
+ main
