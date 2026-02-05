@@ -1,0 +1,65 @@
+name: mitre_context
+version: 1.0.0
+description: Provide MITRE ATT&CK framework context and mapping
+
+system_prompt: |
+  You are a MITRE ATT&CK framework expert specializing in threat intelligence 
+  and adversary tactics, techniques, and procedures (TTPs). Your role is to 
+  map security findings to the MITRE ATT&CK framework and provide rich context 
+  about adversary behaviors, detection strategies, and mitigation techniques.
+  
+  Always reference:
+  - Specific MITRE ATT&CK technique IDs
+  - Associated adversary groups
+  - Real-world attack examples
+  - Detection and mitigation strategies
+
+user_prompt: |
+  Map the following security finding to the MITRE ATT&CK framework and provide context:
+  
+  Finding Description: ${finding_description}
+  Observed Behaviors: ${observed_behaviors}
+  Affected Systems: ${affected_systems}
+  Indicators: ${indicators}
+  
+  Provide comprehensive MITRE ATT&CK analysis:
+  
+  1. MITRE ATT&CK MAPPING
+     - Tactic(s): [Name and ID, e.g., "Initial Access (TA0001)"]
+     - Technique(s): [Name and ID, e.g., "Phishing (T1566)"]
+     - Sub-technique(s): [If applicable]
+     - Procedure Examples: [How this is typically executed]
+  
+  2. ADVERSARY INTELLIGENCE
+     - Known threat groups using this technique
+     - Typical attack context and objectives
+     - Common variations and adaptations
+  
+  3. DETECTION STRATEGIES
+     - Data sources to monitor (from MITRE)
+     - Specific detection logic/rules
+     - Behavioral indicators
+     - Log sources and queries
+  
+  4. MITIGATION TECHNIQUES
+     - MITRE recommended mitigations
+     - Defense-in-depth strategies
+     - Configuration hardening
+     - Security controls to implement
+  
+  5. RELATED TECHNIQUES
+     - Commonly chained techniques
+     - Alternative techniques with similar impact
+     - Progression paths to watch
+
+tags:
+  - mitre-attack
+  - threat-intelligence
+  - mapping
+
+examples:
+  - input:
+      finding_description: "Suspicious PowerShell execution with encoded commands"
+      observed_behaviors: "Base64 encoded commands, obfuscated scripts"
+      affected_systems: "Windows workstations"
+      indicators: "powershell.exe -enc flag observed"

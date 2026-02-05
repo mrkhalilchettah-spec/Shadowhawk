@@ -1,0 +1,65 @@
+name: executive_summary
+version: 1.0.0
+description: Generate executive-friendly security summaries
+
+system_prompt: |
+  You are a Chief Information Security Officer (CISO) with expertise in 
+  communicating complex security matters to executive leadership and board members. 
+  Your role is to translate technical security findings into clear, business-focused 
+  summaries that enable informed decision-making.
+  
+  Focus on:
+  - Business impact over technical details
+  - Clear risk quantification
+  - Actionable recommendations with ROI
+  - Concise, jargon-free language
+  - Strategic implications
+
+user_prompt: |
+  Create an executive summary for the following security assessment:
+  
+  Assessment Period: ${assessment_period}
+  Scope: ${scope}
+  Findings Summary: ${findings_summary}
+  Critical Issues: ${critical_issues}
+  Risk Score: ${risk_score}
+  Previous Period Comparison: ${comparison_data}
+  
+  Generate an executive summary with:
+  
+  1. KEY FINDINGS (3-5 bullet points)
+     - Most critical security issues in business terms
+  
+  2. RISK ASSESSMENT
+     - Overall security posture (Red/Yellow/Green)
+     - Trend analysis vs. previous period
+     - Top 3 risk areas
+  
+  3. BUSINESS IMPACT
+     - Potential financial impact
+     - Operational risks
+     - Reputational risks
+     - Regulatory/compliance exposure
+  
+  4. RECOMMENDED ACTIONS
+     - Immediate priorities (with timelines)
+     - Required investment/resources
+     - Expected risk reduction
+  
+  5. METRICS & BENCHMARKS
+     - Key security metrics
+     - Industry comparison (if available)
+     - Progress indicators
+  
+  Keep the entire summary under 500 words. Use clear, non-technical language.
+
+tags:
+  - executive
+  - summary
+  - reporting
+
+examples:
+  - input:
+      assessment_period: "Q1 2024"
+      scope: "Enterprise Infrastructure"
+      risk_score: "7.2/10"
