@@ -1,3 +1,5 @@
+ cto-task-goalreplace-placeholder-ai-functionality-with-real-llm-integ
+
  cto-task-goalbuild-a-professional-enterprise-grade-frontend-dashboard
 # ShadowHawk Platform Frontend
 node_modules/
@@ -6,7 +8,8 @@ dist/
 coverage/
 .env*
 .DS_Store
-=======
+
+ main
 # Python
 __pycache__/
 *.py[cod]
@@ -25,6 +28,13 @@ parts/
 sdist/
 var/
 wheels/
+ cto-task-goalreplace-placeholder-ai-functionality-with-real-llm-integ
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+
 pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
@@ -51,6 +61,7 @@ coverage.xml
 .pytest_cache/
 
 # Environments
+ main
 .env
 .venv
 env/
@@ -60,6 +71,35 @@ env.bak/
 venv.bak/
 
 # IDE
+ cto-task-goalreplace-placeholder-ai-functionality-with-real-llm-integ
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Ruff
+.ruff_cache/
+
+# Project specific
+*.log
+.cache/
+data/
+temp/
+=======
 .idea/
 .vscode/
 *.swp
@@ -85,4 +125,5 @@ shadowhawk.db
 secrets.yaml
 secrets.yml
 secrets.json
+ main
  main

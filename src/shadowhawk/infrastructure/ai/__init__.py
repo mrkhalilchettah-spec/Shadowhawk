@@ -1,5 +1,5 @@
 """
-ShadowHawk Platform - Unit Tests
+ShadowHawk Platform - AI Infrastructure
 Copyright (c) 2024 ShadowHawk Team
 Licensed under the MIT License
 """

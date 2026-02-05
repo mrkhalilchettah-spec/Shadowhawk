@@ -1,14 +1,25 @@
-# ShadowHawk Platform
+ ShadowHawk Platform
+
+ cto-task-goalreplace-placeholder-ai-functionality-with-real-llm-integ
+Advanced Security Analysis Platform with AI-powered threat detection and remediation.
+
+ Features
+
+- **Real LLM Integration**: Uses OpenAI GPT-4 and Anthropic Claude for advanced analysis
+- **Prompt Library System**: Version-controlled prompt templates for consistent AI outputs
+- **Response Caching**: Redis-based caching to reduce API costs and improve performance
+- **Cost Tracking**: Comprehensive tracking of LLM API usage and costs
+- **Structured Outputs**: Validated and parsed AI responses using Pydantic models
 
 ML-Powered Cybersecurity Threat Intelligence Platform
 
-## Overview
+ Overview
 
 ShadowHawk Platform is an intelligent cybersecurity threat detection and analysis system powered by machine learning. It provides comprehensive threat modeling, detection, correlation, and risk assessment capabilities.
 
-## Features
+ Features
 
-### ML-Powered Engines
+ ML-Powered Engines
 
 - **Threat Modeling Engine**: Graph-based attack surface analysis with ML-powered scenario generation
 - **Detection Engine**: Anomaly detection and behavioral analysis using ensemble ML models
@@ -16,24 +27,47 @@ ShadowHawk Platform is an intelligent cybersecurity threat detection and analysi
 - **Correlation Engine**: Graph-based event correlation and campaign detection
 - **Risk Scoring Engine**: Dynamic risk modeling with exploitability prediction
 
-### External API Integrations
+ External API Integrations
 
 - **NVD (National Vulnerability Database)**: CVE data and vulnerability information
 - **MITRE ATT&CK**: Threat intelligence and technique framework
 - **EPSS (Exploit Prediction Scoring System)**: Exploit probability scoring
 - **ExploitDB**: Exploit information and searchable database
 
-### ML Models
+ ML Models
 
 - **AnomalyDetector**: Ensemble of Isolation Forest and Local Outlier Factor
 - **ThreatClassifier**: Multi-class classifier using Random Forest, Gradient Boosting, and Logistic Regression
 - **RiskPredictor**: Ensemble regressor for dynamic risk scoring
 - **TechniqueExtractor**: NLP-based MITRE ATT&CK technique extraction
 - **CorrelationModel**: Graph-based correlation with DBSCAN clustering
+ main
 
-## Installation
+ Installation
 
 ```bash
+ cto-task-goalreplace-placeholder-ai-functionality-with-real-llm-integ
+poetry install
+```
+
+ Configuration
+
+Create a `.env` file with your API keys:
+
+```
+OPENAI_API_KEY=your_openai_key_here
+ANTHROPIC_API_KEY=your_anthropic_key_here
+REDIS_URL=redis://localhost:6379
+```
+
+ Usage
+
+```python
+from shadowhawk.application.engines.ai_analysis import AIAnalysisEngine
+
+engine = AIAnalysisEngine()
+result = await engine.analyze_threat(threat_data)
+=======
 # Clone the repository
 git clone https://github.com/shadowhawk/platform.git
 cd platform
@@ -42,7 +76,7 @@ cd platform
 pip install -e ".[dev]"
 ```
 
-## Quick Start
+ Quick Start
 
 ```python
 from shadowhawk.application.engines import (
@@ -80,7 +114,7 @@ features = np.random.rand(10)
 analysis = inference.analyze_threat(features, event["description"], event["id"])
 ```
 
-## Configuration
+ Configuration
 
 Set environment variables for external API access:
 
@@ -88,11 +122,15 @@ Set environment variables for external API access:
 export NVD_API_KEY="your_nvd_api_key"
 export DEBUG="false"
 export LOG_LEVEL="INFO"
+ main
 ```
 
-## Testing
+ Testing
 
 ```bash
+ cto-task-goalreplace-placeholder-ai-functionality-with-real-llm-integ
+poetry run pytest
+
 # Run all tests
 pytest
 
@@ -106,7 +144,7 @@ pytest tests/integration/
 pytest --cov=src/shadowhawk --cov-report=html
 ```
 
-## Project Structure
+ Project Structure
 
 ```
 shadowhawk/
@@ -122,13 +160,18 @@ shadowhawk/
 │   └── engines/           # Business logic engines
 └── infrastructure/         # External integrations
     └── external/          # API clients
+ main
 ```
 
-## License
+ License
+
+ cto-task-goalreplace-placeholder-ai-functionality-with-real-llm-integ
+MIT License - see LICENSE file for details.
 
 MIT License - see LICENSE file for details
 
-## Attribution
+ Attribution
 
 Copyright (c) 2024 ShadowHawk Team
 SPDX-License-Identifier: MIT
+ main

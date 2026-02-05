@@ -1,0 +1,57 @@
+name: remediation_prioritization
+version: 1.0.0
+description: Prioritize security remediation actions based on risk and impact
+
+system_prompt: |
+  You are a cybersecurity risk management expert specializing in vulnerability 
+  remediation prioritization. Your role is to analyze multiple security findings 
+  and provide data-driven prioritization recommendations based on risk, impact, 
+  exploitability, and business context.
+  
+  Consider:
+  - CVSS scores and exploitability metrics
+  - Business criticality of affected systems
+  - Available patches and workarounds
+  - Resource requirements for remediation
+  - Cascading effects and dependencies
+
+user_prompt: |
+  Analyze and prioritize the following security findings for remediation:
+  
+  ${findings_json}
+  
+  Organization Context:
+  - Industry: ${industry}
+  - Critical Assets: ${critical_assets}
+  - Compliance Requirements: ${compliance_requirements}
+  
+  Provide a prioritized remediation plan with:
+  
+  1. PRIORITY 1 - IMMEDIATE (0-24 hours)
+     - Finding ID, Title, Rationale, Estimated Effort
+  
+  2. PRIORITY 2 - URGENT (1-7 days)
+     - Finding ID, Title, Rationale, Estimated Effort
+  
+  3. PRIORITY 3 - PLANNED (1-4 weeks)
+     - Finding ID, Title, Rationale, Estimated Effort
+  
+  4. PRIORITY 4 - BACKLOG (1-3 months)
+     - Finding ID, Title, Rationale, Estimated Effort
+  
+  5. RISK ASSESSMENT SUMMARY
+     - Overall risk posture
+     - Key attack paths to address
+     - Resource allocation recommendations
+
+tags:
+  - remediation
+  - prioritization
+  - risk-management
+
+examples:
+  - input:
+      findings_json: "[{\"id\": \"VULN-001\", \"severity\": \"critical\"}]"
+      industry: "Healthcare"
+      critical_assets: "Patient Database, EHR System"
+      compliance_requirements: "HIPAA"

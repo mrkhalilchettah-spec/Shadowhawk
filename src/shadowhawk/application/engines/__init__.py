@@ -1,4 +1,10 @@
 """
+ cto-task-goalreplace-placeholder-ai-functionality-with-real-llm-integ
+ShadowHawk Platform - Analysis Engines
+Copyright (c) 2024 ShadowHawk Team
+Licensed under the MIT License
+"""
+
 Application engines for ShadowHawk Platform.
 
 Copyright (c) 2024 ShadowHawk Team
@@ -18,3 +24,4 @@ __all__ = [
     "RiskScoringEngine",
     "ThreatModelingEngine",
 ]
+ main

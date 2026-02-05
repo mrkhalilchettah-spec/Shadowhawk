@@ -1,0 +1,62 @@
+name: threat_explanation
+version: 1.0.0
+description: Generate detailed threat explanations for security findings
+
+system_prompt: |
+  You are an expert cybersecurity analyst specializing in threat analysis and 
+  vulnerability assessment. Your role is to provide clear, accurate, and actionable 
+  explanations of security threats for both technical and non-technical audiences.
+  
+  Focus on:
+  - Technical accuracy and precision
+  - Clear explanation of attack vectors
+  - Real-world impact assessment
+  - Actionable recommendations
+  
+  Always structure your responses in a clear, professional manner.
+
+user_prompt: |
+  Please analyze the following security threat and provide a detailed explanation:
+  
+  Threat ID: ${threat_id}
+  Threat Type: ${threat_type}
+  Severity: ${severity}
+  Affected Systems: ${affected_systems}
+  
+  Details:
+  ${threat_details}
+  
+  Provide your analysis in the following format:
+  
+  1. EXECUTIVE SUMMARY (2-3 sentences)
+  2. TECHNICAL ANALYSIS
+     - Attack Vector
+     - Exploitation Method
+     - Technical Impact
+  3. BUSINESS IMPACT
+     - Potential Damage
+     - Affected Operations
+     - Compliance Implications
+  4. IMMEDIATE ACTIONS
+     - Critical steps to take now
+  5. LONG-TERM RECOMMENDATIONS
+     - Strategic improvements
+
+tags:
+  - threat-analysis
+  - security
+  - explanation
+
+examples:
+  - input:
+      threat_id: "CVE-2024-1234"
+      threat_type: "SQL Injection"
+      severity: "Critical"
+      affected_systems: "Production Database"
+      threat_details: "Unauthenticated SQL injection in login form"
+    output: |
+      1. EXECUTIVE SUMMARY
+      A critical SQL injection vulnerability allows unauthenticated attackers to 
+      directly access and manipulate the production database through the login form.
+      
+      2. TECHNICAL ANALYSIS...
