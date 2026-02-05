@@ -1,0 +1,71 @@
+# ShadowHawk Platform - Default Configuration
+# Copyright (c) 2024 ShadowHawk Platform
+# Licensed under the MIT License
+
+application:
+  name: "ShadowHawk Platform"
+  version: "1.0.0"
+  debug: false
+
+security:
+  secret_key: "change-in-production"
+  algorithm: "HS256"
+  access_token_expire_minutes: 30
+  refresh_token_expire_days: 7
+
+database:
+  url: "sqlite:///shadowhawk.db"
+  pool_size: 10
+  max_overflow: 20
+
+sandbox:
+  docker:
+    enabled: true
+    image: "python:3.11-slim"
+    timeout: 300
+    memory_limit: "512m"
+    cpu_limit: 1.0
+  firejail:
+    enabled: true
+    timeout: 300
+
+ai:
+  provider: "openai"
+  model: "gpt-4"
+  api_key: ""
+  timeout: 60
+
+engines:
+  threat_modeling:
+    enabled: true
+  detection_logic:
+    enabled: true
+  mitre_attack:
+    enabled: true
+  correlation:
+    enabled: true
+    time_window_seconds: 300
+  risk_scoring:
+    enabled: true
+  ai_analysis:
+    enabled: true
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  workers: 4
+  rate_limit:
+    calls: 100
+    period: 60
+
+cors:
+  origins:
+    - "http://localhost:3000"
+    - "http://localhost:8080"
+  allow_credentials: true
+  allow_methods: ["*"]
+  allow_headers: ["*"]
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

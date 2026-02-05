@@ -1,0 +1,35 @@
+# ShadowHawk Platform - Docker Compose
+# Copyright (c) 2024 ShadowHawk Platform
+# Licensed under the MIT License
+
+version: '3.8'
+
+services:
+  shadowhawk:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://shadowhawk:shadowhawk@db:5432/shadowhawk
+      - SECRET_KEY=${SECRET_KEY:-change-in-production}
+    volumes:
+      - ./logs:/app/logs
+      - ./reports:/app/reports
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_USER=shadowhawk
+      - POSTGRES_PASSWORD=shadowhawk
+      - POSTGRES_DB=shadowhawk
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

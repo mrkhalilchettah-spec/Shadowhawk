@@ -1,3 +1,5 @@
+ cto-task-goaldesign-and-implement-the-initial-architecture-and-core-m
+
  cto-task-goalreplace-placeholder-ai-functionality-with-real-llm-integ
 
  cto-task-goalbuild-a-professional-enterprise-grade-frontend-dashboard
@@ -9,6 +11,7 @@ coverage/
 .env*
 .DS_Store
 
+ main
  main
 # Python
 __pycache__/
@@ -28,6 +31,8 @@ parts/
 sdist/
 var/
 wheels/
+ cto-task-goaldesign-and-implement-the-initial-architecture-and-core-m
+
  cto-task-goalreplace-placeholder-ai-functionality-with-real-llm-integ
 *.egg-info/
 .installed.cfg
@@ -37,10 +42,20 @@ wheels/
 
 pip-wheel-metadata/
 share/python-wheels/
+ main
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
+
+ cto-task-goaldesign-and-implement-the-initial-architecture-and-core-m
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
 
 # PyInstaller
 *.manifest
@@ -72,6 +87,7 @@ venv.bak/
 
 # IDE
  cto-task-goalreplace-placeholder-ai-functionality-with-real-llm-integ
+ main
 .vscode/
 .idea/
 *.swp
@@ -86,6 +102,41 @@ htmlcov/
 .tox/
 .hypothesis/
 
+ cto-task-goaldesign-and-implement-the-initial-architecture-and-core-m
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+audit_logs/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Docker
+*.dockerignore
+
+# Generated files
+reports/
+*.pdf
+temp/
+tmp/
+
+# Security
+secrets/
+*.key
+*.pem
+*.crt
+
+# API Keys
+api_keys.txt
+config/local.yaml
+
 # MyPy
 .mypy_cache/
 .dmypy.json
@@ -99,7 +150,7 @@ dmypy.json
 .cache/
 data/
 temp/
-=======
+
 .idea/
 .vscode/
 *.swp
@@ -125,5 +176,6 @@ shadowhawk.db
 secrets.yaml
 secrets.yml
 secrets.json
+ main
  main
  main
