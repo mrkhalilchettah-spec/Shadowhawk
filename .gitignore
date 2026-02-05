@@ -1,3 +1,12 @@
+ cto-task-goalbuild-a-professional-enterprise-grade-frontend-dashboard
+# ShadowHawk Platform Frontend
+node_modules/
+.next/
+dist/
+coverage/
+.env*
+.DS_Store
+=======
 # Python
 __pycache__/
 *.py[cod]
@@ -76,3 +85,4 @@ shadowhawk.db
 secrets.yaml
 secrets.yml
 secrets.json
+ main
