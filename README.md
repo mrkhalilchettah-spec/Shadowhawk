@@ -1,4 +1,8 @@
- 
+---- Latest Release
+- Version: **v0.1.0 – Technical Preview**
+- Status: Pre-release
+- Release page: https://github.com/mrkhalilchettah-spec/Shadowhawk/releases/tag/v0.1.0
+  
 # ShadowHawk Platform
 
 **Enterprise-Grade Cyber Security Platform**
