@@ -1,6 +1,6 @@
 # ShadowHawk Platform - Development Dependencies
-# Copyright (c) 2024 ShadowHawk Platform
-# Licensed under the MIT License
+# Copyright (c) 2026 ShadowHawk Platform
+# Licensed under the Apach License
 
 -r requirements.txt
 
