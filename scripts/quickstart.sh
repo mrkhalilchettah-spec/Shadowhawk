@@ -1,7 +1,7 @@
 #!/bin/bash
 # ShadowHawk Platform - Quick Start Script
-# Copyright (c) 2024 ShadowHawk Platform
-# Licensed under the MIT License
+# Copyright (c) 2026 ShadowHawk Platform
+# Licensed under the Apache License
 
 set -e
 
