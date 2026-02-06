@@ -2,8 +2,8 @@
 """
 ShadowHawk Platform - Database Initialization Script
 
-Copyright (c) 2024 ShadowHawk Platform
-Licensed under the MIT License
+Copyright (c) 2026 ShadowHawk Platform
+Licensed under the Apache License
 See LICENSE file in the project root for full license information.
 """
 
