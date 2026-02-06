@@ -1,7 +1,7 @@
 """
 Basic Usage Example
-Copyright (c) 2024 ShadowHawk Team
-Licensed under the MIT License
+Copyright (c) 2026 ShadowHawk Team
+Licensed under the Apache License
 
 Demonstrates basic usage of the ShadowHawk AI Analysis Engine.
 """
